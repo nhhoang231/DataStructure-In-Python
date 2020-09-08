@@ -15,4 +15,4 @@ e3 = Node("Wed")
 # Link first node to second node
 list1.headval.nextval = e2
 # Link second node to third node
-e2.n 
+e2.n
