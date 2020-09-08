@@ -41,6 +41,25 @@ class SLinkedList:
             print (printval.dataval)
             printval = printval.nextval
 
+# Insertion in between two data nodes
+# Function to add node
+    def Inbetween(self,middle_node,newdata):
+        if middle_node is None:
+            print("The mentioned node is absent")
+            return
+
+        NewNode = Node(newdata)
+        NewNode.nextval = middle_node.nextval
+        middle_node.nextval = NewNode
+
+# Print the linked list
+    def listprint(self):
+        printval = self.headval
+        while printval is not None:
+            print (printval.dataval)
+            printval = printval.nextval
+
+ 
 list = SLinkedList()
 list.headval = Node("Mon")
 e2 = Node("Tue")
@@ -50,5 +69,6 @@ list.headval.nextval = e2
 e2.nextval = e3
 
 list.AtBegining("Sun")
-l
+list.AtEnd("Thu")
+list.Inbetween(list.headval.nextval,"Fri")
 list.listprint()
